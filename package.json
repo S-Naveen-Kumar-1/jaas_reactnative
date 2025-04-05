@@ -10,8 +10,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
+    "@xmldom/xmldom": "0.8.7",
+    "abab": "^2.0.6",
+    "lib-jitsi-meet": "https://github.com/jitsi/lib-jitsi-meet/releases/download/v1919.0.0+d4a47d0e/lib-jitsi-meet.tgz",
+    "promise.withresolvers": "^1.0.3",
     "react": "18.2.0",
-    "react-native": "0.73.4"
+    "react-native": "0.73.4",
+    "react-native-background-timer": "^2.4.1",
+    "react-native-performance": "^5.1.2",
+    "react-native-url-polyfill": "^2.0.0",
+    "react-native-webrtc": "^124.0.5",
+    "text-encoding": "^0.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -29,6 +39,9 @@
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"
+  },
+  "overrides": {
+    "@xmldom/xmldom": "0.8.7"
   },
   "engines": {
     "node": ">=18"
