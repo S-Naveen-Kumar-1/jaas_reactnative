@@ -1,10 +1,17 @@
-import React, { useEffect } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text, ScrollView, Dimensions } from 'react-native';
-import { RTCView } from 'react-native-webrtc';
-import { useTracks } from './JitsiContext';
+import React, {useEffect} from 'react';
+import {
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  ScrollView,
+  Dimensions,
+} from 'react-native';
+import {RTCView} from 'react-native-webrtc';
+import {useTracks} from './JitsiContext';
 import JitsiMeetJS from 'lib-jitsi-meet';
 
-const { width } = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 const JitsiConference = () => {
   const {
@@ -22,7 +29,7 @@ const JitsiConference = () => {
 
   useEffect(() => {
     if (JitsiMeetJS) {
-      JitsiMeetJS.init({ disableAudioLevels: false });
+      JitsiMeetJS.init({disableAudioLevels: false});
       console.log('JitsiMeetJS initialized');
       createLocalTracks();
     } else {
@@ -72,10 +79,10 @@ const JitsiConference = () => {
   const startScreenShare = async () => {
     try {
       const tracks = await JitsiMeetJS.createLocalTracks({
-        devices: ["desktop"],
+        devices: ['desktop'],
       });
 
-      const screenTrack = tracks.find((track) => track.getType() === "video");
+      const screenTrack = tracks.find(track => track.getType() === 'video');
       if (screenTrack) {
         if (conference) {
           await conference.addTrack(screenTrack);
@@ -84,12 +91,12 @@ const JitsiConference = () => {
           screenShareTrack.dispose();
         }
         setScreenShareTrack(screenTrack);
-        console.log("Screen share started", screenTrack);
+        console.log('Screen share started', screenTrack);
       } else {
-        console.error("No screen track created.");
+        console.error('No screen track created.');
       }
     } catch (error) {
-      console.error("Error starting screen share:", error);
+      console.error('Error starting screen share:', error);
     }
   };
 
@@ -100,7 +107,7 @@ const JitsiConference = () => {
       }
       screenShareTrack.dispose();
       setScreenShareTrack(null);
-      console.log("Screen share stopped");
+      console.log('Screen share stopped');
     }
   };
   return (
@@ -117,9 +124,17 @@ const JitsiConference = () => {
         )}
 
         <Text style={styles.header}>Remote Participants</Text>
-        <ScrollView contentContainerStyle={styles.remoteContainer} horizontal>
-          {Object.values(remoteTracks).map((track, index) =>
-            renderRTCView(track, `remote-${index}`)
+        <ScrollView horizontal style={styles.remoteContainer}>
+          {Object.keys(remoteTracks).map(participantId =>
+            remoteTracks[participantId].map(track =>
+              track.getType() === 'video' ? (
+                <RTCView
+                  key={track.getId()}
+                  streamURL={track.getOriginalStream().toURL()}
+                  style={styles.remoteVideo}
+                />
+              ) : null,
+            ),
           )}
         </ScrollView>
       </ScrollView>
@@ -132,12 +147,9 @@ const JitsiConference = () => {
           </TouchableOpacity>
         ) : (
           <>
-           
-              <TouchableOpacity style={styles.button} onPress={startScreenShare}>
-                <Text style={styles.buttonText}>Start Screen Share</Text>
-              </TouchableOpacity>
-           
-            
+            <TouchableOpacity style={styles.button} onPress={startScreenShare}>
+              <Text style={styles.buttonText}>Start Screen Share</Text>
+            </TouchableOpacity>
           </>
         )}
       </View>
