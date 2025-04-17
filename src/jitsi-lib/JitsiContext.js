@@ -14,18 +14,16 @@ export const useTracks = () => {
 };
 
 export const TracksProvider = ({ children }) => {
-
   const [connection, setConnection] = useState(null);
   const [conference, setConference] = useState(null);
   const [localAudioTrack, setLocalAudioTrack] = useState(null);
   const [localVideoTrack, setLocalVideoTrack] = useState(null);
   const [remoteTracks, setRemoteTracks] = useState({});
   const [appId, setAppId] = useState(
-    "vpaas-magic-cookie-53ccaf42598243d593932049bc381fc8"
+    "vpaas-magic-cookie-58f484fa173f4cda981a9ed1d8fc7a8f"
   );
-  
   const [room, setRoom] = useState("screensharetest");
-  const [jwt, setJwt] = useState("eyJraWQiOiJ2cGFhcy1tYWdpYy1jb29raWUtNTNjY2FmNDI1OTgyNDNkNTkzOTMyMDQ5YmMzODFmYzgvMGI3MmE2LVNBTVBMRV9BUFAiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJqaXRzaSIsImlzcyI6ImNoYXQiLCJpYXQiOjE3NDM4NDU4NTcsImV4cCI6MTc0Mzg1MzA1NywibmJmIjoxNzQzODQ1ODUyLCJzdWIiOiJ2cGFhcy1tYWdpYy1jb29raWUtNTNjY2FmNDI1OTgyNDNkNTkzOTMyMDQ5YmMzODFmYzgiLCJjb250ZXh0Ijp7ImZlYXR1cmVzIjp7ImxpdmVzdHJlYW1pbmciOnRydWUsIm91dGJvdW5kLWNhbGwiOnRydWUsInNpcC1vdXRib3VuZC1jYWxsIjpmYWxzZSwidHJhbnNjcmlwdGlvbiI6dHJ1ZSwicmVjb3JkaW5nIjp0cnVlfSwidXNlciI6eyJoaWRkZW4tZnJvbS1yZWNvcmRlciI6ZmFsc2UsIm1vZGVyYXRvciI6dHJ1ZSwibmFtZSI6ImthbmFrYXByYXNhZCIsImlkIjoiYXV0aDB8NjdlZTFjYjgwMmNlN2Y1ZDdmMTk5ZTk3IiwiYXZhdGFyIjoiIiwiZW1haWwiOiJrYW5ha2FwcmFzYWRAY2FydmVuaWNoZS5jb20ifX0sInJvb20iOiIqIn0.Cc65AHad4LZFso8VnF8d9TbQE_K8qTQu2LQOWGq18S10_i_cGguINDXp6qanJwKCFTRq75egad_I0YfKAB1JS64uDaRS3QHjZ7q4kbsv06BdieYcmS7eRFmEdDFV4Wg6_QOoY_fGi3h_lnPz27Tn5Uyq9b84HPCOS8b3l6x3rTS778dXO_CQ0Sf6i0PHQI_GOi_a4M9qEXwBPTpp0LbJ-NxQWb5SInCKHytbtlfLCq5b9T2JLbMtOddvlpQdMgZLn4vUcWhr5aOpSImv9CTmC7Dh4yOv-j3ihDNgm5cNSBZmyD8hXIGijGAeh2m8yPOTk17I5IMpe10f-7MneBxHdA");
+  const [jwt, setJwt] = useState("eyJraWQiOiJ2cGFhcy1tYWdpYy1jb29raWUtNThmNDg0ZmExNzNmNGNkYTk4MWE5ZWQxZDhmYzdhOGYvMjU4NzY0LVNBTVBMRV9BUFAiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJqaXRzaSIsImlzcyI6ImNoYXQiLCJpYXQiOjE3NDQ4NjA3NDcsImV4cCI6MTc0NDg2Nzk0NywibmJmIjoxNzQ0ODYwNzQyLCJzdWIiOiJ2cGFhcy1tYWdpYy1jb29raWUtNThmNDg0ZmExNzNmNGNkYTk4MWE5ZWQxZDhmYzdhOGYiLCJjb250ZXh0Ijp7ImZlYXR1cmVzIjp7ImxpdmVzdHJlYW1pbmciOnRydWUsIm91dGJvdW5kLWNhbGwiOnRydWUsInNpcC1vdXRib3VuZC1jYWxsIjpmYWxzZSwidHJhbnNjcmlwdGlvbiI6dHJ1ZSwicmVjb3JkaW5nIjp0cnVlfSwidXNlciI6eyJoaWRkZW4tZnJvbS1yZWNvcmRlciI6ZmFsc2UsIm1vZGVyYXRvciI6dHJ1ZSwibmFtZSI6Im5hdmVlbi5zIiwiaWQiOiJnb29nbGUtb2F1dGgyfDEwMDU5OTEyMTQxODE1ODIyMjEwNyIsImF2YXRhciI6IiIsImVtYWlsIjoibmF2ZWVuLnNAY2FydmVuaWNoZS5jb20ifX0sInJvb20iOiIqIn0.k9Nb9ZX2ITFMjDSP7m2_7U426gIY8vozEtEDzxBXQ34n7RdcaZFeUwtATfhFhLR0TlSr4nei6vy1x2kUMZyAUnsmQdK2Me4PMOX6daoMgUy_5oY1ikCc6cGDBl-VNj7KXJ1bgB3kvVxBTd0M5DhyIAcs8CRamGK4trxClfwvL6RBp_rO9i90kaTSid31uUMYuCEyQUe5jWxSFGkBWrQWUU69nVDoloc-tOUQOTLoUV5BjvY3OqCSd-y8Fzce-_rMXW2YDL9GBq8RPLiu3VCQ1hK97GA4BZf7aL4xFeRTYA9lZWbYWBiBdYh8YTFfhDqAxT2u6eQcnvpPtxJgx0OOEA");
   const [isConnected, setIsConnected] = useState(false);
   const [videoVisible, setVideoVisible] = useState(true);
   const [audioOn, setAudioOn] = useState(true);
@@ -142,7 +140,19 @@ export const TracksProvider = ({ children }) => {
   const joinMeeting = async () => {
 
     console.log(room,"room inisde joinMeeting check also jwt",jwt)
-    const options = buildOptions(appId, room);
+    let options = buildOptions(appId, room);
+    options={...options,  
+      configOverwrite: {
+      startWithAudioMuted: true,
+      desktopSharingIOS: true,
+      startScreenSharing: true,
+      _iosScreenRecordingExtension: "com.shreenshare.testing.BroadcastExtension" 
+    },
+    featureFlags: {
+      'ios.screensharing.enabled': true
+    }
+  }
+    
     const conn = new JitsiMeetJS.JitsiConnection(null, jwt, options);
     console.log(conn,"check conn")
     conn.addEventListener(

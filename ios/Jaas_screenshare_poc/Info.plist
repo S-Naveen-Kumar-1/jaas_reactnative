@@ -26,22 +26,30 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>RTCAppGroupIdentifier</key>
+	<string>com.shreenshare.testing.BroadcastExtension</string>
+	<key>RTCScreenSharingExtension</key>
+     <string>com.shreenshare.testing.BroadcastExtension</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This app uses Bluetooth for audio routing</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires camera access for video conferencing</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Requires Location Permission</string>
-	<key>NSCameraUsageDescription</key>
-<string>This app requires camera access for video conferencing</string>
-<key>NSMicrophoneUsageDescription</key>
-<string>This app requires microphone access for audio conferencing</string>
-<key>NSBluetoothAlwaysUsageDescription</key>
-<string>This app uses Bluetooth for audio routing</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires microphone access for audio conferencing</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>UIBackgroundModes</key>
+	<array>
+	    <string>screenRecording</string>
+		<string>voip</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

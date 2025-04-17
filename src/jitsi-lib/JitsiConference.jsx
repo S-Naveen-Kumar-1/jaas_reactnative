@@ -77,28 +77,40 @@ const JitsiConference = () => {
     }
   };
   const startScreenShare = async () => {
+
+
     try {
       const tracks = await JitsiMeetJS.createLocalTracks({
         devices: ['desktop'],
       });
-
-      const screenTrack = tracks.find(track => track.getType() === 'video');
-      if (screenTrack) {
-        if (conference) {
-          await conference.addTrack(screenTrack);
-        }
-        if (screenShareTrack) {
-          screenShareTrack.dispose();
-        }
-        setScreenShareTrack(screenTrack);
-        console.log('Screen share started', screenTrack);
-      } else {
-        console.error('No screen track created.');
+  
+      if (tracks.length === 0) {
+        console.error('No tracks created.');
+        return;
       }
+  
+      const screenTrack = tracks.find(track => track.getType() === 'video');
+      if (!screenTrack) {
+        console.error('No screen track created.');
+        return;
+      }
+  
+      if (conference) {
+        await conference.addTrack(screenTrack);
+      }
+  
+      // Dispose the previous screen share track if it exists
+      if (screenShareTrack) {
+        screenShareTrack.dispose();
+      }
+  
+      setScreenShareTrack(screenTrack);
+      console.log('Screen share started', screenTrack);
     } catch (error) {
       console.error('Error starting screen share:', error);
     }
   };
+  
 
   const stopScreenShare = async () => {
     if (screenShareTrack) {

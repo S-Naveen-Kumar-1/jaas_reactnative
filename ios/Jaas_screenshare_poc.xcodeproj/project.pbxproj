@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,11 +13,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-Jaas_screenshare_poc-Jaas_screenshare_pocTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Jaas_screenshare_poc-Jaas_screenshare_pocTests.a */; };
-		7FE7A1572DA1489F00100B44 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE7A1562DA1489E00100B44 /* ReplayKit.framework */; };
-		7FE7A1612DA1489F00100B44 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE7A1562DA1489E00100B44 /* ReplayKit.framework */; };
-		7FE7A1632DA1489F00100B44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE7A1622DA1489F00100B44 /* UIKit.framework */; };
-		7FE7A16A2DA1489F00100B44 /* ScreenShareExtensionSetupUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7FE7A1602DA1489F00100B44 /* ScreenShareExtensionSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7FE7A16D2DA1489F00100B44 /* ScreenShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7FE7A1552DA1489E00100B44 /* ScreenShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7F5B36602DAFB2EA00C82D2B /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE7A1562DA1489E00100B44 /* ReplayKit.framework */; };
+		7F5B36672DAFB2EA00C82D2B /* BroadcastExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7F5B365F2DAFB2EA00C82D2B /* BroadcastExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -29,19 +26,12 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Jaas_screenshare_poc;
 		};
-		7FE7A1682DA1489F00100B44 /* PBXContainerItemProxy */ = {
+		7F5B36652DAFB2EA00C82D2B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7FE7A15F2DA1489F00100B44;
-			remoteInfo = ScreenShareExtensionSetupUI;
-		};
-		7FE7A16B2DA1489F00100B44 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7FE7A1542DA1489E00100B44;
-			remoteInfo = ScreenShareExtension;
+			remoteGlobalIDString = 7F5B365E2DAFB2EA00C82D2B;
+			remoteInfo = BroadcastExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -52,8 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				7FE7A16D2DA1489F00100B44 /* ScreenShareExtension.appex in Embed Foundation Extensions */,
-				7FE7A16A2DA1489F00100B44 /* ScreenShareExtensionSetupUI.appex in Embed Foundation Extensions */,
+				7F5B36672DAFB2EA00C82D2B /* BroadcastExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,9 +64,8 @@
 		5709B34CF0A7D63546082F79 /* Pods-Jaas_screenshare_poc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jaas_screenshare_poc.release.xcconfig"; path = "Target Support Files/Pods-Jaas_screenshare_poc/Pods-Jaas_screenshare_poc.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Jaas_screenshare_poc-Jaas_screenshare_pocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jaas_screenshare_poc-Jaas_screenshare_pocTests.debug.xcconfig"; path = "Target Support Files/Pods-Jaas_screenshare_poc-Jaas_screenshare_pocTests/Pods-Jaas_screenshare_poc-Jaas_screenshare_pocTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Jaas_screenshare_poc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jaas_screenshare_poc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FE7A1552DA1489E00100B44 /* ScreenShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5B365F2DAFB2EA00C82D2B /* BroadcastExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BroadcastExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE7A1562DA1489E00100B44 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
-		7FE7A1602DA1489F00100B44 /* ScreenShareExtensionSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtensionSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE7A1622DA1489F00100B44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7FE7A1772DA148C400100B44 /* Jaas_screenshare_poc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Jaas_screenshare_poc.entitlements; path = Jaas_screenshare_poc/Jaas_screenshare_poc.entitlements; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Jaas_screenshare_poc/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,25 +74,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		7FE7A16E2DA1489F00100B44 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		7F5B36682DAFB2EA00C82D2B /* Exceptions for "BroadcastExtension" folder in "BroadcastExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 7FE7A1542DA1489E00100B44 /* ScreenShareExtension */;
-		};
-		7FE7A1722DA1489F00100B44 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 7FE7A15F2DA1489F00100B44 /* ScreenShareExtensionSetupUI */;
+			target = 7F5B365E2DAFB2EA00C82D2B /* BroadcastExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		7FE7A1582DA1489F00100B44 /* ScreenShareExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (7FE7A16E2DA1489F00100B44 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScreenShareExtension; sourceTree = "<group>"; };
-		7FE7A1642DA1489F00100B44 /* ScreenShareExtensionSetupUI */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (7FE7A1722DA1489F00100B44 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScreenShareExtensionSetupUI; sourceTree = "<group>"; };
+		7F5B36612DAFB2EA00C82D2B /* BroadcastExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7F5B36682DAFB2EA00C82D2B /* Exceptions for "BroadcastExtension" folder in "BroadcastExtension" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = BroadcastExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,20 +115,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7FE7A1522DA1489E00100B44 /* Frameworks */ = {
+		7F5B365C2DAFB2EA00C82D2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FE7A1572DA1489F00100B44 /* ReplayKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7FE7A15D2DA1489F00100B44 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7FE7A1612DA1489F00100B44 /* ReplayKit.framework in Frameworks */,
-				7FE7A1632DA1489F00100B44 /* UIKit.framework in Frameworks */,
+				7F5B36602DAFB2EA00C82D2B /* ReplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +182,7 @@
 				13B07FAE1A68108700A75B9A /* Jaas_screenshare_poc */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* Jaas_screenshare_pocTests */,
-				7FE7A1582DA1489F00100B44 /* ScreenShareExtension */,
-				7FE7A1642DA1489F00100B44 /* ScreenShareExtensionSetupUI */,
+				7F5B36612DAFB2EA00C82D2B /* BroadcastExtension */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -216,8 +197,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* Jaas_screenshare_poc.app */,
 				00E356EE1AD99517003FC87E /* Jaas_screenshare_pocTests.xctest */,
-				7FE7A1552DA1489E00100B44 /* ScreenShareExtension.appex */,
-				7FE7A1602DA1489F00100B44 /* ScreenShareExtensionSetupUI.appex */,
+				7F5B365F2DAFB2EA00C82D2B /* BroadcastExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -273,56 +253,31 @@
 			buildRules = (
 			);
 			dependencies = (
-				7FE7A1692DA1489F00100B44 /* PBXTargetDependency */,
-				7FE7A16C2DA1489F00100B44 /* PBXTargetDependency */,
+				7F5B36662DAFB2EA00C82D2B /* PBXTargetDependency */,
 			);
 			name = Jaas_screenshare_poc;
 			productName = Jaas_screenshare_poc;
 			productReference = 13B07F961A680F5B00A75B9A /* Jaas_screenshare_poc.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7FE7A1542DA1489E00100B44 /* ScreenShareExtension */ = {
+		7F5B365E2DAFB2EA00C82D2B /* BroadcastExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7FE7A16F2DA1489F00100B44 /* Build configuration list for PBXNativeTarget "ScreenShareExtension" */;
+			buildConfigurationList = 7F5B36692DAFB2EA00C82D2B /* Build configuration list for PBXNativeTarget "BroadcastExtension" */;
 			buildPhases = (
-				7FE7A1512DA1489E00100B44 /* Sources */,
-				7FE7A1522DA1489E00100B44 /* Frameworks */,
-				7FE7A1532DA1489E00100B44 /* Resources */,
+				7F5B365B2DAFB2EA00C82D2B /* Sources */,
+				7F5B365C2DAFB2EA00C82D2B /* Frameworks */,
+				7F5B365D2DAFB2EA00C82D2B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				7FE7A1582DA1489F00100B44 /* ScreenShareExtension */,
+				7F5B36612DAFB2EA00C82D2B /* BroadcastExtension */,
 			);
-			name = ScreenShareExtension;
-			packageProductDependencies = (
-			);
-			productName = ScreenShareExtension;
-			productReference = 7FE7A1552DA1489E00100B44 /* ScreenShareExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		7FE7A15F2DA1489F00100B44 /* ScreenShareExtensionSetupUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7FE7A1732DA1489F00100B44 /* Build configuration list for PBXNativeTarget "ScreenShareExtensionSetupUI" */;
-			buildPhases = (
-				7FE7A15C2DA1489F00100B44 /* Sources */,
-				7FE7A15D2DA1489F00100B44 /* Frameworks */,
-				7FE7A15E2DA1489F00100B44 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				7FE7A1642DA1489F00100B44 /* ScreenShareExtensionSetupUI */,
-			);
-			name = ScreenShareExtensionSetupUI;
-			packageProductDependencies = (
-			);
-			productName = ScreenShareExtensionSetupUI;
-			productReference = 7FE7A1602DA1489F00100B44 /* ScreenShareExtensionSetupUI.appex */;
+			name = BroadcastExtension;
+			productName = BroadcastExtension;
+			productReference = 7F5B365F2DAFB2EA00C82D2B /* BroadcastExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -331,8 +286,9 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -341,10 +297,7 @@
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
 					};
-					7FE7A1542DA1489E00100B44 = {
-						CreatedOnToolsVersion = 16.2;
-					};
-					7FE7A15F2DA1489F00100B44 = {
+					7F5B365E2DAFB2EA00C82D2B = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -364,8 +317,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* Jaas_screenshare_poc */,
 				00E356ED1AD99517003FC87E /* Jaas_screenshare_pocTests */,
-				7FE7A1542DA1489E00100B44 /* ScreenShareExtension */,
-				7FE7A15F2DA1489F00100B44 /* ScreenShareExtensionSetupUI */,
+				7F5B365E2DAFB2EA00C82D2B /* BroadcastExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -387,14 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7FE7A1532DA1489E00100B44 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7FE7A15E2DA1489F00100B44 /* Resources */ = {
+		7F5B365D2DAFB2EA00C82D2B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -552,14 +497,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7FE7A1512DA1489E00100B44 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7FE7A15C2DA1489F00100B44 /* Sources */ = {
+		7F5B365B2DAFB2EA00C82D2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -574,15 +512,10 @@
 			target = 13B07F861A680F5B00A75B9A /* Jaas_screenshare_poc */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
-		7FE7A1692DA1489F00100B44 /* PBXTargetDependency */ = {
+		7F5B36662DAFB2EA00C82D2B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7FE7A15F2DA1489F00100B44 /* ScreenShareExtensionSetupUI */;
-			targetProxy = 7FE7A1682DA1489F00100B44 /* PBXContainerItemProxy */;
-		};
-		7FE7A16C2DA1489F00100B44 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7FE7A1542DA1489E00100B44 /* ScreenShareExtension */;
-			targetProxy = 7FE7A16B2DA1489F00100B44 /* PBXContainerItemProxy */;
+			target = 7F5B365E2DAFB2EA00C82D2B /* BroadcastExtension */;
+			targetProxy = 7F5B36652DAFB2EA00C82D2B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -645,6 +578,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Jaas_screenshare_poc/Jaas_screenshare_poc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KFMZUCST2G;
 				ENABLE_BITCODE = NO;
@@ -659,8 +594,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shreenshare.testing;
 				PRODUCT_NAME = Jaas_screenshare_poc;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -674,6 +610,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Jaas_screenshare_poc/Jaas_screenshare_poc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KFMZUCST2G;
 				INFOPLIST_FILE = Jaas_screenshare_poc/Info.plist;
@@ -687,14 +625,15 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shreenshare.testing;
 				PRODUCT_NAME = Jaas_screenshare_poc;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
-		7FE7A1702DA1489F00100B44 /* Debug */ = {
+		7F5B366A2DAFB2EA00C82D2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -704,7 +643,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension/ScreenShareExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BroadcastExtension/BroadcastExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -712,8 +651,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScreenShareExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension;
+				INFOPLIST_FILE = BroadcastExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BroadcastExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -725,7 +664,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Jaas-screenshare-poc.ScreenShareExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shreenshare.testing.BroadcastExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -736,7 +675,7 @@
 			};
 			name = Debug;
 		};
-		7FE7A1712DA1489F00100B44 /* Release */ = {
+		7F5B366B2DAFB2EA00C82D2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -746,7 +685,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension/ScreenShareExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BroadcastExtension/BroadcastExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -755,8 +694,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScreenShareExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension;
+				INFOPLIST_FILE = BroadcastExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BroadcastExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -767,88 +706,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Jaas-screenshare-poc.ScreenShareExtension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		7FE7A1742DA1489F00100B44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = KFMZUCST2G;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScreenShareExtensionSetupUI/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtensionSetupUI;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Jaas-screenshare-poc.ScreenShareExtensionSetupUI";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		7FE7A1752DA1489F00100B44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = KFMZUCST2G;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScreenShareExtensionSetupUI/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtensionSetupUI;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Jaas-screenshare-poc.ScreenShareExtensionSetupUI";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shreenshare.testing.BroadcastExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -927,7 +785,10 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -995,9 +856,13 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1024,20 +889,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7FE7A16F2DA1489F00100B44 /* Build configuration list for PBXNativeTarget "ScreenShareExtension" */ = {
+		7F5B36692DAFB2EA00C82D2B /* Build configuration list for PBXNativeTarget "BroadcastExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FE7A1702DA1489F00100B44 /* Debug */,
-				7FE7A1712DA1489F00100B44 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7FE7A1732DA1489F00100B44 /* Build configuration list for PBXNativeTarget "ScreenShareExtensionSetupUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7FE7A1742DA1489F00100B44 /* Debug */,
-				7FE7A1752DA1489F00100B44 /* Release */,
+				7F5B366A2DAFB2EA00C82D2B /* Debug */,
+				7F5B366B2DAFB2EA00C82D2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
